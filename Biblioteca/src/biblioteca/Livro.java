@@ -17,7 +17,8 @@ public class Livro {
 }
 
     public String getLivro(){
-    return titulo + genero + autor;    
-        
+        return titulo;
     }
+    
+}
     
