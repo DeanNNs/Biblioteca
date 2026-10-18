@@ -2,16 +2,21 @@
 package biblioteca;
 
 public class Autor {
-    private String autor;
-    private Livro livroAutor;
+    private Livro autor;
+    private Livro titulo;
     
-   public Autor(String autor, Livro livroAutor){
+   public Autor(Livro autor){
        this.autor = autor;
-       this.livroAutor = livroAutor;
    }
    
-   public String getAutor(){
-        return autor;
+   public Livro getAutor(){
+        return this.autor;
     }
+   
+   public void ListaLivroAutor(){
+       
+   }
+   
+   
    
 }

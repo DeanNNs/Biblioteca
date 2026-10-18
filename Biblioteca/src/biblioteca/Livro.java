@@ -4,12 +4,12 @@ public class Livro {
     
     private String titulo;
     private String genero;
-    private Autor autor;
+    private String autor;
     private int unidade;
     
     
     
-    public Livro(String titulo, String genero, Autor autor, int unidade){
+    public Livro(String titulo, String genero, String autor, int unidade){
     this.titulo = titulo;
     this.genero = genero;
     this.autor = autor;
@@ -17,7 +17,7 @@ public class Livro {
 }
 
     public String getLivro(){
-        return titulo;
+        return this.titulo;
     }
     
 }
