@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-    
+        
+        List<Livro> livros = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         int escolha;
 
@@ -22,19 +23,21 @@ public class App {
 
             switch (escolha) {
                 case 1:
-                    List<Livro> livros = new ArrayList<>();
-                    
+                      
                     System.out.println("Digite o título do livro:");
-                    String titulo = sc.nextLine();
+                    String titulo = sc.next();
                     System.out.println("Digite o genêro do livro:");
-                    String genero = sc.nextLine();
+                    String genero = sc.next();
                     System.out.println("Digite o autor do livro:");
-                    String autor = sc.nextLine();
+                    String autor = sc.next();
                     System.out.println("Digite quantas unidades do livro existem:");
                     int unidade = sc.nextInt();
                     
-                    Livro
+                    Livro livro = new Livro(titulo, genero, autor, unidade);
+                    livros.add(livro);
                     
+                    Livro.listarLivros();
+
                     break;
 
                 case 2:
