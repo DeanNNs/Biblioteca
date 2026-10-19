@@ -22,12 +22,19 @@ public class App {
 
             switch (escolha) {
                 case 1:
+                    List<Livro> livros = new ArrayList<>();
+                    
                     System.out.println("Digite o título do livro:");
                     String titulo = sc.nextLine();
                     System.out.println("Digite o genêro do livro:");
                     String genero = sc.nextLine();
                     System.out.println("Digite o autor do livro:");
                     String autor = sc.nextLine();
+                    System.out.println("Digite quantas unidades do livro existem:");
+                    int unidade = sc.nextInt();
+                    
+                    Livro
+                    
                     break;
 
                 case 2:
@@ -56,11 +63,6 @@ public class App {
         
         //System.out.println("Digite o nome do livro:");
     
-        
-       
-        
-        
-        
-        
+ 
     }
 }
