@@ -55,7 +55,7 @@ public class Usuario {
         System.out.println("Digite o CPF do usuário:");
         this.cpf = scan.nextLine();
 
-        this.id = proximoId++;
+        this.id = id++;
         System.out.println("Usuário cadastrado com ID: " + this.id);
     }
 
@@ -64,6 +64,7 @@ public class Usuario {
     }
 
     public List<Livro> getGuardarLivros() {
+        
         return new ArrayList<>(livros);
     }
 }
