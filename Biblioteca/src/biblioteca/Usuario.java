@@ -10,15 +10,17 @@ public class Usuario {
     private int id;
     private String nome;
     private String cpf;
+    private int codigo;
     private final List<Livro> livros = new ArrayList<>();
 
-    public Usuario() {
+    public Usuario(String nome1, String cpf1) {
     }
 
-    public Usuario(int id, String nome, String cpf) {
+    public Usuario(int id, String nome, String cpf, int codigo) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
+        this.codigo = codigo;
         if (id >= proximoId) {
             proximoId = id + 1;
         }
@@ -67,6 +69,33 @@ public class Usuario {
         
         return new ArrayList<>(livros);
     }
+    
+    
+    
+      public static void pegarLivroEmprestado(Scanner sc) {
+        System.out.println("Digite o código do livro que deseja pegar emprestado:");
+        int codigo = sc.nextInt();
+
+        System.out.println("Digite a quantidade de exemplares:");
+        int quantidade = sc.nextInt();
+        if (quantidade <= 0) {
+            System.out.println("Quantidade inválida!");
+            return;
+        }
+      }
+        
+        public static void devolverLivro(Scanner sc) {
+        System.out.println("Digite o código do livro que deseja devolver:");
+        int codigo = sc.nextInt();
+
+        System.out.println("Digite a quantidade de livros que deseja devolver:");
+        int quantidade = sc.nextInt();
+        if (quantidade <= 0) {
+            System.out.println("Quantidade inválida!");
+            return;
+        }
+        
+  }
 }
     
 
