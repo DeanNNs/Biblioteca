@@ -19,7 +19,10 @@ public class App {
             System.out.println("DIGITE 1 PARA CRIAR UM LIVRO");
             System.out.println("DIGITE 2 PARA PEGAR UM LIVRO EMPRESTADO");
             System.out.println("DIGITE 3 PARA DEVOLVER UM LIVRO");
-            System.out.println("DIGITE 4 PARA VER OS LIVROS DE UM DETERMINADO AUTOR");
+            System.out.println("DIGITE 4 PARA VER TODOS OS LIVROS");
+            System.out.println("DIGITE 5 PARA VER LIVROS DE UM DETERMINADO AUTOR");
+            System.out.println("DIGITE 6 PARA REMOVER UM LIVRO");
+            System.out.println("DIGITE 7 PARA EDITAR A QUANTIDADE DE UM LIVRO");
             System.out.println("DIGITE QUALQUER OUTRO NÚMERO PARA SAIR");
 
             escolha = sc.nextInt();
