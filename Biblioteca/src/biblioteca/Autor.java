@@ -14,9 +14,16 @@ public class Autor {
         return this.autor;
     }
    
-   public void ListaLivroAutor(){
-       
-   }
+   public void listaAutorLivro(String autorEscolhido) {
+    for (Livro book : Livro.livros) {
+
+        if (book.getAutor().equalsIgnoreCase(autorEscolhido)) {
+
+            System.out.println("Livro: " + book.getLivro());
+
+        }
+    }
+}
    
    
    

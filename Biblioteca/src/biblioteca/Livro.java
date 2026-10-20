@@ -96,7 +96,7 @@ public class Livro {
         }
 
     }
-    public static boolean codigoExiste(int codigoNovo) {
+    public static boolean verificarCodigo(int codigoNovo) {
     for (Livro book : livros) {
         if (book.getCodigo() == codigoNovo) {
             return true;

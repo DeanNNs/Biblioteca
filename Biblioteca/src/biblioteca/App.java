@@ -9,7 +9,7 @@ public class App {
         int escolha, opcao;
 
         do {
-            System.out.println("\nESCOLHA UMA OPÇÃO");
+            System.out.println("ESCOLHA UMA OPÇÃO");
             System.out.println("DIGITE 1 PARA CRIAR UM LIVRO");
             System.out.println("DIGITE 2 PARA PEGAR UM LIVRO EMPRESTADO");
             System.out.println("DIGITE 3 PARA DEVOLVER UM LIVRO");
@@ -21,6 +21,7 @@ public class App {
             escolha = sc.nextInt();
 
             switch (escolha) {
+                
                 case 1:
                       
                     System.out.println("Digite o título do livro:");
@@ -33,7 +34,7 @@ public class App {
                     int unidade = sc.nextInt();
                     System.out.println("Digite o codigo do livro");
                     int codigoNovo = sc.nextInt();
-                        if (Livro.codigoExiste(codigoNovo)) {
+                        if (Livro.verificarCodigo(codigoNovo)) {
                              System.out.println("Esse código já está cadastrado!");
                         } else {
                              Livro livro = new Livro(titulo, genero, autor, unidade, codigoNovo);
@@ -62,9 +63,9 @@ public class App {
                     break;
                     
                 case 6:
-                    System.out.println("Remover ou editar a quatidade um livro");
+                    
                     do { 
-                        System.out.println("\nESCOLHA UMA OPÇÃO");
+                        System.out.println("ESCOLHA UMA OPÇÃO");
                         System.out.println("DIGITE 1 PARA AUMENTAR A QUANTIDADE DE UM LIVRO");
                         System.out.println("DIGITE 2 PARA DIMINUIR A QUANTIDADE DE UM LIVRO");
                         System.out.println("!! CUIDADO A OPÇÃO 2 PODE EXCLUÍ-LO !!");
@@ -123,6 +124,3 @@ public class App {
         sc.close();
     }
 }
-//List<Livro> livros = new ArrayList<>();
-
-//System.out.println("Digite o nome do livro:");
