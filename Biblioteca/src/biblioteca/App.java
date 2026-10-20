@@ -38,11 +38,16 @@ public class App {
                     String autor = sc.next();
                     System.out.println("Digite quantas unidades do livro existem:");
                     int unidade = sc.nextInt();
-                    
+                    System.out.println("Digite o codigo do livro");
+                    int codigoNovo = sc.nextInt();
+                        if(Livro.getCodigo() == codigoNovo){
+                            
+                        }
                     Livro livro = new Livro(titulo, genero, autor, unidade);
-                    livros.add(livro);
                     
-                    Livro.listarLivros();
+                    livro.livros.add(livro);
+                    
+                    livro.listarLivros();
 
                     break;
 
@@ -58,6 +63,29 @@ public class App {
                     System.out.println("Ver livros de um autor");
                     break;
 
+                case 5:
+                    System.out.println("Ver livros de um determinado autor");
+                    break;
+                    
+                case 6:
+                    System.out.println("Remover um livro");
+                    
+                    System.out.println("Digite o código do livro que deseja excluir:");
+                    int codigo = sc.nextInt();
+                    livro.removerLivro(codigo);
+                    
+                    break;
+                    
+                case 7:
+                    System.out.println("Editar a quantidade de um livro");
+                    
+                    System.out.println("Digite a quantidade que deseja:");
+                    int quantidade = sc.nextInt();
+                    
+                    livro.setQuantidade(quantidade);
+                    
+                    break;
+                    
                 default:
                     System.out.println("Saindo do sistema...");
                     break;
