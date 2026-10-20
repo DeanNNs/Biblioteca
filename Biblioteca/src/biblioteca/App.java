@@ -9,7 +9,7 @@ public class App {
     public static void main(String[] args) {
 
         try (Scanner sc = new Scanner(System.in)) {
-            int escolha;
+            int escolha, opcao;
             List<Usuario> usuarios = new ArrayList<>();
             
             do {
@@ -74,7 +74,59 @@ Usuario.pegarLivroEmprestado(sc);
                         break;
                         
                     case 6:
-                        editarQuantidadeLivros(sc);
+                        
+                        System.out.println("Excluir ou editar a quatidade um livro");
+
+                    do { 
+                        System.out.println("ESCOLHA UMA OPÇÃO");
+                        System.out.println("DIGITE 1 PARA AUMENTAR A QUANTIDADE DE UM LIVRO");
+                        System.out.println("DIGITE 2 PARA DIMINUIR A QUANTIDADE DE UM LIVRO");
+                        System.out.println("DIGITE 3 PARA EXCLUIR UM LIVRO");
+                        System.out.println("DIGITE QUALQUER OUTRO NÚMERO PARA SAIR");
+                    
+                        opcao = sc.nextInt();
+                    
+                        switch(opcao){
+                                
+                            case 1:
+                                
+                                System.out.println("Digite o código do livro que deseja alterar:");
+                                int codigo = sc.nextInt();
+                                
+                                System.out.println("Digite a quantidade que deseja adicionar:");
+                                int quant = sc.nextInt();
+                                
+                                Livro.AdicionarQuantidade(codigo, quant);
+                                
+                            break;
+                            
+                            case 2:
+                            
+                                System.out.println("Digite o código do livro que deseja alterar:");
+                                int cod = sc.nextInt();
+                                
+                                System.out.println("Digite a quantidade que deseja remover:");
+                                int quan = sc.nextInt();
+                                
+                                Livro.SubtrairQuantidade(cod, quan);
+                                
+                            break;
+                                
+                            case 3:
+                            
+                                System.out.println("Digite o código do livro que deseja excluir:");
+                                int codig = sc.nextInt();
+                        
+                            Livro.RemoverLivro(codig);
+                            break;
+                            
+                            default:
+                                System.out.println("Voltando a página anterior...");
+                            break;
+                    
+                    }
+                    } while (opcao >= 1 && opcao <= 3);
+                        
                         break;
                         
                     case 7:

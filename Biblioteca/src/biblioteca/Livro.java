@@ -48,29 +48,33 @@ public class Livro {
     }
 
     public static void SubtrairQuantidade(int codigo, int quant) {
+        boolean encontrado = false;
         for (Livro book : livros) {
             if (book.getCodigo() == codigo) {
-                if (quant > book.quantidade) {
+                encontrado = true;
+                if (quant >= book.quantidade) {
                     System.out.println("Quantidade inválida!");
 
                 } else if (quant < book.quantidade) {
                     int sub;
                     sub = book.quantidade - quant;
                     book.setQuantidade(sub);
-                } else {
-                    Livro.livros.remove(book);
-                    System.out.println("O livro foi removido.");
+                    System.out.println("Quantidade atualizada!");
+                }
                 }
 
-            } else {
+            }if(encontrado = false){
                 System.out.println("Código inexistente!");
             }
-        }
     }
 
-    public static void AdicionarQuantidade(int codigo, int quant) {
+    public static void AdicionarQuantidade(int codigo, int quant){
+        boolean encontrado = false;
+        
         for (Livro book : livros) {
-            if (book.getCodigo() == codigo) {
+            if (book.getCodigo() == codigo){
+                encontrado = true;
+                
                 if (quant <= 0) {
                     System.out.println("Quantidade inválida!");
 
@@ -78,28 +82,39 @@ public class Livro {
                     int soma;
                     soma = book.quantidade + quant;
                     book.setQuantidade(soma);
+                    System.out.println("Quantidade atualizada!");
                 }
 
-            } else {
-                System.out.println("Código inexistente!");
             }
+            }if(encontrado = false){
+                System.out.println("Código inexistente!");
         }
 
     }
 
-    public static void RemoverLivro(int codigo) {
+    public static void RemoverLivro(int codigo){
+        boolean encontrado = false;
+        Livro bookCod = null;
+
         for (Livro book : livros) {
             if (book.codigo == codigo) {
-                Livro.livros.remove(book);
-                System.out.println("O livro foi removido.");
-
-            } else {
-                System.out.println("Código inexistente!");
-            }
-
+                encontrado = true;
+	book = bookCod;
+	break;
+}
         }
+            if(encontrado == true){
+            Livro.livros.remove(bookCod);
+            System.out.println("O livro foi removido.");
+
+            }
+            if(encontrado == false){
+                System.out.println("Código inexistente!");
+
+	}        
 
     }
+
     public static boolean verificarCodigo(int codigoNovo) {
     for (Livro book : livros) {
         if (book.getCodigo() == codigoNovo) {
