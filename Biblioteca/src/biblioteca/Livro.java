@@ -37,7 +37,7 @@ public class Livro {
         this.quantidade = quantidade;
     }
 
-    public void listarLivros() {
+    public static void listarLivros() {
         for (Livro livro : livros) {
             System.out.println("informações do livro: " + livro.getLivro());
         }

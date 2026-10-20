@@ -46,7 +46,7 @@ public class App {
                              Livro.livros.add(livro);
                         }
                     
-                    livro.listarLivros();
+                    Livro.listarLivros();
 
                     break;
 
