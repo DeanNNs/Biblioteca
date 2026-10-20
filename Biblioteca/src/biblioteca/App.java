@@ -44,7 +44,7 @@ public class App {
                         } else {
                              Livro livro = new Livro(titulo, genero, autor, unidade, codigoNovo);
                              Livro.livros.add(livro);
-                        
+                        }
                     
                     livro.listarLivros();
 
