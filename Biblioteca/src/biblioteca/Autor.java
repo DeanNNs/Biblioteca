@@ -10,14 +10,10 @@ public class Autor {
        this.titulo = titulo;
    }
    
-   public Livro getAutor(){
-        return this.autor;
-    }
-   
-   public void listaAutorLivro(String autorEscolhido) {
+   public static void listaAutorLivro(String autorEscolhido) {
     for (Livro book : Livro.livros) {
 
-        if (book.getAutor().equalsIgnoreCase(autorEscolhido)) {
+        if (book.getAutorLivro().equalsIgnoreCase(autorEscolhido)) {
 
             System.out.println("Livro: " + book.getLivro());
 

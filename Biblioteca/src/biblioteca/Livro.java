@@ -28,6 +28,10 @@ public class Livro {
     public int getCodigo() {
         return this.codigo;
     }
+    
+       public String getAutorLivro(){
+        return this.autor;
+    }
 
     public int getQuantidade() {
         return this.quantidade;
@@ -105,4 +109,5 @@ public class Livro {
 
     return false;
 }
+    
 }

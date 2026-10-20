@@ -59,7 +59,12 @@ public class App {
                     break;
 
                 case 5:
-                    System.out.println("Ver livros de um determinado autor");
+                    
+                    System.out.println("Digite o nome do Autor");
+                    String autorEscolhido = sc.next();
+                    
+                    Autor.listaAutorLivro(autorEscolhido);
+                    
                     break;
                     
                 case 6:
