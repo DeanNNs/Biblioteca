@@ -9,7 +9,7 @@ public class App {
         
         List<Livro> livros = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-        int escolha;
+        int escolha, opcao;
 
         Usuario usuario = new Usuario(1, "", "");
         usuario.cadastrarUsuario(sc);
@@ -21,8 +21,7 @@ public class App {
             System.out.println("DIGITE 3 PARA DEVOLVER UM LIVRO");
             System.out.println("DIGITE 4 PARA VER TODOS OS LIVROS");
             System.out.println("DIGITE 5 PARA VER LIVROS DE UM DETERMINADO AUTOR");
-            System.out.println("DIGITE 6 PARA REMOVER UM LIVRO");
-            System.out.println("DIGITE 7 PARA EDITAR A QUANTIDADE DE UM LIVRO");
+            System.out.println("DIGITE 6 PARA REMOVER OU EDITAR A QUANTIDADE DE UM LIVRO");
             System.out.println("DIGITE QUALQUER OUTRO NÚMERO PARA SAIR");
 
             escolha = sc.nextInt();
@@ -68,24 +67,22 @@ public class App {
                     break;
                     
                 case 6:
-                    System.out.println("Remover um livro");
+                    System.out.println("Remover ou editar a quatidade um livro");
                     
-                    System.out.println("Digite o código do livro que deseja excluir:");
-                    int codigo = sc.nextInt();
-                    livro.removerLivro(codigo);
+                    opcao = sc.nextInt();
                     
-                    break;
+                    switch(opcao){
+                        case 1:
+                            
+                        System.out.println("Digite o código do livro que deseja excluir:");
+                        int codigo = sc.nextInt();
+                        
+                        
                     
-                case 7:
-                    System.out.println("Editar a quantidade de um livro");
-                    
-                    System.out.println("Digite a quantidade que deseja:");
-                    int quantidade = sc.nextInt();
-                    
-                    livro.setQuantidade(quantidade);
+                    }
                     
                     break;
-                    
+ 
                 default:
                     System.out.println("Saindo do sistema...");
                     break;
