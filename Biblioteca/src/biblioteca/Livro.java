@@ -48,24 +48,24 @@ public class Livro {
     }
 
     public static void SubtrairQuantidade(int codigo, int quant) {
-        boolean encontrado = false;
         for (Livro book : livros) {
             if (book.getCodigo() == codigo) {
-                encontrado = true;
-                if (quant >= book.quantidade) {
+                if (quant > book.quantidade) {
                     System.out.println("Quantidade inválida!");
 
                 } else if (quant < book.quantidade) {
                     int sub;
                     sub = book.quantidade - quant;
                     book.setQuantidade(sub);
-                    System.out.println("Quantidade atualizada!");
-                }
+                } else {
+                    Livro.livros.remove(book);
+                    System.out.println("O livro foi removido.");
                 }
 
-            }if(encontrado = false){
+            } else {
                 System.out.println("Código inexistente!");
             }
+        }
     }
 
     public static void AdicionarQuantidade(int codigo, int quant){
@@ -86,20 +86,20 @@ public class Livro {
                 }
 
             }
-            }if(encontrado = false){
+            }if(encontrado == false){
                 System.out.println("Código inexistente!");
         }
 
     }
-
-    public static void RemoverLivro(int codigo){
+  
+    public static void RemoverLivro(int codigo) {
         boolean encontrado = false;
-        Livro bookCod = null;
-
+        Livro bookCod = null; 
+        
         for (Livro book : livros) {
             if (book.codigo == codigo) {
                 encontrado = true;
-	book = bookCod;
+	bookCod = book;
 	break;
 }
         }
@@ -111,10 +111,9 @@ public class Livro {
             if(encontrado == false){
                 System.out.println("Código inexistente!");
 
-	}        
+	}       
 
     }
-
     public static boolean verificarCodigo(int codigoNovo) {
     for (Livro book : livros) {
         if (book.getCodigo() == codigoNovo) {
