@@ -39,18 +39,19 @@ public class App {
                     int unidade = sc.nextInt();
                     System.out.println("Digite o codigo do livro");
                     int codigoNovo = sc.nextInt();
-                        if(Livro.getCodigo() == codigoNovo){
-                            
-                        }
-                    Livro livro = new Livro(titulo, genero, autor, unidade);
-                    
-                    livro.livros.add(livro);
+                        if (Livro.codigoExiste(codigoNovo)) {
+                             System.out.println("Esse código já está cadastrado!");
+                        } else {
+                             Livro livro = new Livro(titulo, genero, autor, unidade, codigoNovo);
+                             Livro.livros.add(livro);
+                        
                     
                     livro.listarLivros();
 
                     break;
 
                 case 2:
+                
                     System.out.println("Pegar livro emprestado");
                     break;
 
