@@ -22,7 +22,7 @@ public class Livro {
     }
 
     public String getLivro() {
-        return this.titulo + ", " + this.genero + ", " + this.autor + ", " + this.quantidade;
+        return this.titulo + ", " + this.genero + ", " + this.autor + ", " + this.quantidade + ", " + this.codigo ;
     }
 
     public int getCodigo() {

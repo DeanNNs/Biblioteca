@@ -1,18 +1,12 @@
 package biblioteca;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
         
-        List<Livro> livros = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         int escolha, opcao;
-
-        Usuario usuario = new Usuario(1, "", "");
-        usuario.cadastrarUsuario(sc);
 
         do {
             System.out.println("\nESCOLHA UMA OPÇÃO");
@@ -45,9 +39,7 @@ public class App {
                              Livro livro = new Livro(titulo, genero, autor, unidade, codigoNovo);
                              Livro.livros.add(livro);
                         }
-                    
-                    Livro.listarLivros();
-
+                        
                     break;
 
                 case 2:
@@ -60,7 +52,9 @@ public class App {
                     break;
 
                 case 4:
-                    System.out.println("Ver livros de um autor");
+                    
+                    Livro.listarLivros();
+                    
                     break;
 
                 case 5:
