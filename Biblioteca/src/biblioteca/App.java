@@ -11,6 +11,9 @@ public class App {
         Scanner sc = new Scanner(System.in);
         int escolha;
 
+        Usuario usuario = new Usuario(1, "", "");
+        usuario.cadastrarUsuario(sc);
+
         do {
             System.out.println("\nESCOLHA UMA OPÇÃO");
             System.out.println("DIGITE 1 PARA CRIAR UM LIVRO");
@@ -62,10 +65,6 @@ public class App {
         sc.close();
     }
 }
-        //List<Livro> livros = new ArrayList<>();
-        
-        //System.out.println("Digite o nome do livro:");
-    
- 
-    }
-}
+//List<Livro> livros = new ArrayList<>();
+
+//System.out.println("Digite o nome do livro:");

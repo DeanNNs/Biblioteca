@@ -2,11 +2,13 @@ package biblioteca;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Usuario {
     private int id;
     private String nome;
     private String cpf;
+
     private List<Livro> livros = new ArrayList<>();
 
     public Usuario(int id, String nome, String cpf) {
@@ -16,7 +18,7 @@ public class Usuario {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -24,7 +26,7 @@ public class Usuario {
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
@@ -32,14 +34,30 @@ public class Usuario {
     }
 
     public String getCpf() {
-        return cpf;
+        return this.cpf;
     }
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
+    public void cadastrarUsuario(Scanner scan) {
+        System.out.println("Digite o nome do usuário:");
+        this.nome = scan.next();
+      if(this.nome =! null){
+    
+      this.id = id++;
+      
+        System.out.println("Digite o CPF do usuário:");
+        this.cpf = scan.nextLine();
+    
+      }
+    }
+  
+    
+
     public void guardarLivro(Livro livro) {
         livros.add(livro);
     }
 }
+
